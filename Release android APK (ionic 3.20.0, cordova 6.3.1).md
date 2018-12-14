@@ -4,11 +4,11 @@
 ```
 ionic cordova build --release android
 ```
-## Create keystore (only the first time)
+## 2) Create keystore (only the first time)
 ```
 keytool -genkey -v -keystore my-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
 ```
-## Generate apk
+## 3) Generate apk
 ```
 jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-key.keystore android-release-unsigned.apk alias_name
 
