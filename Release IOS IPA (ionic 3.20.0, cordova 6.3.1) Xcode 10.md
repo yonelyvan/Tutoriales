@@ -1,8 +1,8 @@
-# Release IOS IPA (ionic 3.20.0, cordova 6.3.1) 
+# Release IOS (ionic 3.20.0, cordova 6.3.1) 
 
 ## 1) Generate a release build for ios 
 ```
-ionic build ios
+ionic build ios --release
 ```
 
 ## 2) Open the .xcodeproj project generated on /platforms/ios
