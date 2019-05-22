@@ -1,3 +1,18 @@
+## Tipos de datos
+```dart
+void main() {
+  int n = 10;
+  String str1 = 'hello'; 
+  String str2 = "hello2"; 
+  bool b = true; 
+  
+  print(n);
+  print(str1);
+  print(str2);
+  print(b);
+}
+```
+
 ## MAP
 ```dart
 void main() {
@@ -23,5 +38,21 @@ void main() {
   );
 }
 ```
-## Vector
+## class
+```dart
+class TestClass {   
+  TestClass(){
+     print("Constructor");
+  }
+   void hello() {      
+      print("Hello World"); 
+   } 
+}  
+
+void main() {
+  TestClass c = new TestClass();   
+  c.hello(); 
+}
+```
+
 
