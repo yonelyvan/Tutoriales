@@ -1,4 +1,9 @@
 # Release android APK (ionic 3.20.0, cordova 6.3.1) 
+## 0) create android platform 
+```
+ionic cordova platform rm android
+ionic cordova platform add android@6.3.0
+```
 
 ## 1) Generate a release build for Android 
 ```
