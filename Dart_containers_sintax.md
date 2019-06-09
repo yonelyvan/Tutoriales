@@ -15,7 +15,7 @@ void main() {
 ```
 
 ## List
-```
+```dart
   List list;
   list = ['Negro','Rojo'];
   list.add('Rosa');
@@ -42,7 +42,7 @@ void main() {
  	print("remove[1]: $list");
 ```
 ## Set
-```
+```dart
   Set set;
   set = Set.from(['Argel','Juan','Pedro']);
   print(set); //{Argel, Juan, Pedro}
