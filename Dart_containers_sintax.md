@@ -10,9 +10,47 @@ void main() {
   print(str1);
   print(str2);
   print(b);
+  print(r"sd$%$asdf\nasdf"); //en raw imprime tal cual
 }
 ```
 
+## List
+```
+  List list;
+  list = ['Negro','Rojo'];
+  list.add('Rosa');
+  print(list);
+  
+  List<int> list_num;
+  list_num = [1,2];
+  list_num.add(3);
+  print(list_num);
+  list_num.removeLast();
+  print(list_num);
+  
+  List<String> list_coloraux;
+  list_coloraux = ["Negro","Rojo"];
+    
+  print(list_coloraux);
+  print("originial: $list");
+  //union
+  list.addAll(list_coloraux);
+  print("union: $list");
+  
+  //remove
+  list.removeAt(1);
+ 	print("remove[1]: $list");
+```
+## Set
+```
+  Set set;
+  set = Set.from(['Argel','Juan','Pedro']);
+  print(set); //{Argel, Juan, Pedro}
+  set.add('Erika');
+  print(set); //{Argel, Juan, Pedro, Erika}
+  set.remove('Argel');
+  print(set);
+```
 ## MAP
 ```dart
 void main() {
