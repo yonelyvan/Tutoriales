@@ -13,7 +13,86 @@ void main() {
   print(r"sd$%$asdf\nasdf"); //en raw imprime tal cual
 }
 ```
+## Operadores
+```dart
+  final nombre = "Argel"; //debe declararse e inicializarse
+  //or final String nombre = "Argel";
+  const pi = 3.1415; //se ejecuta en tiempo de compilacion
+  
+  //operadores 
+  expr++    expr-- 
+  &&    ||
+  a++
+  a + b
+  a = b
+  a == b
+  c ? a : b
+  a is T
+  
+  if ((n % i == 0) && (d % i == 0)) … //%modulo
+  
+  // Asigna valor a variable a
+  a = value;
+  // Asigna valor a b, si b es nulo; de lo contrario b se mantiene igual
+  b ??= value;
 
+```
+## Funciones, Funciones arrow y Anónima
+```dart
+  //funciones normales
+  int suma(int a, int b){
+    return a+b;
+  }
+
+  //arrow - like a inline function
+  int suma(int a, int b) => a+b; 
+
+  //anonima
+  List list = ['Rojo','Azul','Verde'];
+  list.forEach( (color){
+    print (color);
+    //if(color== ...){...}
+  });
+  
+
+```
+## Bucles
+```dart
+  //with list
+  for(int i =0; i<10; i++){...}
+  
+  for(String color in list){...}
+  
+  list.forEach( (color){ 
+    print(color); 
+    //...
+  });
+  
+  while(true){ ... }
+  
+  do{
+    //...
+  }while(true);
+  
+  // existe: break, continue
+  
+```
+
+## Parametros
+```dart
+  //[opcionales]
+  void param(int a, int b, [int c]){
+    print("$a, $b, $c");
+  }
+  param(1, 2);
+  
+  //{opcional con label}
+  void param(int a, {String color = "#000"}){
+     print("$a, $color");
+   }
+   param(1, color:"#fff" );
+   param(1);
+```
 ## List
 ```dart
   List list;
@@ -75,6 +154,29 @@ void main() {
     (k,v) => print('${k}: ${v}')
   );
 }
+
+//---------------------
+  Map map; //or Map<int,String> map;
+  map = {1:"Rojo", 2:"Verde"};
+  print(map);
+  
+  map[3] = "Azul";
+  print(map);
+  
+  //Dynamic
+  Map<String, dynamic> map2 = {};
+  map2["A"] = 2000;
+  map2["B"] = 100;
+  print(map2);
+  
+  //remove
+  print(map);
+  map.remove(2); //{1: Rojo, 2: Verde, 3: Azul}
+  print(map); //{1: Rojo, 3: Azul}
+  
+  //Empty, size
+  print(map.isEmpty);
+  print(map.length);
 ```
 ## class
 ```dart
@@ -91,6 +193,35 @@ void main() {
   TestClass c = new TestClass();   
   c.hello(); 
 }
+```
+### Constructores
+```dart
+class Empleado{
+    String nombre;
+
+    //por defecto
+    Empleado(){
+      //...  
+    }
+
+    //con parametros
+    Empleado (int a, ...){
+      //...
+    }
+
+    //inicializando valores
+    Empleado (this.nombre);
+
+  }
+```
+
+### Tipos de dariables 
+```dart
+class Empleado{
+    String nombre; //variable publica
+    String _apellido; // variable priavda
+ }
+
 ```
 
 
