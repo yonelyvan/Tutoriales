@@ -223,5 +223,9 @@ class Empleado{
  }
 
 ```
-
+### Set get
+```dart
+  void set nombre(String nombre) => _nombre  = nombre;
+  String get nombre => _nombre;
+```
 
