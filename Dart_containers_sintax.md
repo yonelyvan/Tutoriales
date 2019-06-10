@@ -228,4 +228,53 @@ class Empleado{
   void set nombre(String nombre) => _nombre  = nombre;
   String get nombre => _nombre;
 ```
+### Herencia
+```dart
+class Empleado{
+  var id;
+  var nombre;
+  double salario;
+
+  void calcularSalario(){
+    print("salario ${salario*5.5}");
+  }
+}
+
+class Chofer extends Empleado{
+  String vehiculoAsignado;
+  
+  void manejarVehiculo(){
+    print("manejando ");
+  }
+}
+
+class Vendedor extends Empleado{
+  String idCliente;
+  
+  void venderACliente(){
+    print("vender ");
+  }
+}
+
+void main() {
+  Chofer chofer = Chofer();
+	chofer.id = 1;
+  chofer.nombre = "yolo";
+  chofer.salario = 100.0;
+  chofer.vehiculoAsignado = "de trabajo";
+  chofer.manejarVehiculo();
+  chofer.calcularSalario();
+  
+  Vendedor vendedor = Vendedor();
+  vendedor.id = 2;
+  vendedor.nombre = "pedro";
+  vendedor.salario = 120.0;
+  vendedor.venderACliente();
+  vendedor.calcularSalario();
+} 
+```
+### Clases Abstractas
+```dart
+
+```
 
