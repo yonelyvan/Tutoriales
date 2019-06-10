@@ -258,7 +258,7 @@ class Vendedor extends Empleado{
 
 void main() {
   Chofer chofer = Chofer();
-	chofer.id = 1;
+  chofer.id = 1;
   chofer.nombre = "yolo";
   chofer.salario = 100.0;
   chofer.vehiculoAsignado = "de trabajo";
@@ -275,6 +275,122 @@ void main() {
 ```
 ### Clases Abstractas
 ```dart
+//no puede ser instanciado
+abstract class Empleado{
+  var id;
+  var nombre;
+  var salario;
+  
+  void calcularSalario(){
+    print("Saliro es: ${salario*5.5}");
+  }
+  void actividad();
+}
 
+class Chofer extends Empleado{
+  var vehivulo;
+ 
+  @override
+  void actividad(){
+    print("manejar");
+  }
+}
+
+class Cajero extends Empleado{
+  var vehivulo;
+
+  @override
+  void actividad(){
+    print("cobrar a clientes");
+  }
+  @override
+  void calcularSalario(){
+    print("Saliro es: ${salario*5.5+100}");
+  }
+}
+
+void main() {
+  Chofer chofer = Chofer();
+  chofer.id = 1;
+  chofer.nombre = "Roberto";
+  chofer.salario = 100;
+  chofer.actividad();
+  chofer.calcularSalario();
+  
+  Cajero cajero = Cajero();
+  cajero.id = 1;
+  cajero.nombre = "Pedro";
+  cajero.salario = 120;
+  cajero.actividad();
+  cajero.calcularSalario();
+} 
+```
+
+### Interfaces implicitas
+```dart
+class Empleado{
+	var id;
+  var nombre;
+  var salario;
+  void calcularSalario(){
+    print("salio es: ${salario*5.5}");
+  }
+}
+
+class Conducta{
+	void buenaConducta(){
+    print("buen comportamiento");
+  }
+}
+
+//implemnta: {(metodo , variables) de empleado} U {(metodo , variables) de Conducta} 
+class Chofer implements Empleado, Conducta{
+	var id = 1;
+  var nombre = "Roberto";
+  var salario = 100;
+  
+  @override
+  void calcularSalario(){
+     print("salio es: ${salario*5.5}");
+  }
+  
+  @override
+  void buenaConducta(){
+    print("Chofer se comporto inadecuadamente");
+  }
+  
+}
+//implemnta: {(metodo , variables) de empleado} U {(metodo , variables) de Conducta} 
+class Cajero implements Empleado, Conducta{
+	var id;
+  var nombre;
+  var salario;
+  
+  @override
+  void calcularSalario(){
+     print("salio es: ${salario*5.5+100}");
+  }
+  
+  @override
+  void buenaConducta(){
+    print("cajero se comporto adecaudamente");
+  }
+}
+
+void main() {
+  Chofer chofer = Chofer();
+  chofer.id = 1;
+  chofer.salario = 100;
+  chofer.nombre = "Roberto";
+  chofer.calcularSalario();
+  chofer.buenaConducta();
+  
+  Cajero cajero = Cajero();
+  cajero.id = 1;
+  cajero.salario = 100;
+  cajero.nombre = "Roberto";
+  cajero.calcularSalario();
+  cajero.buenaConducta();
+} 
 ```
 
