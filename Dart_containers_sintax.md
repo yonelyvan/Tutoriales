@@ -327,7 +327,7 @@ void main() {
 ```
 
 ### Abstract Ejemplo
-```
+```dart
 abstract class Animal{
   int patas;
   void emitirSonido();
