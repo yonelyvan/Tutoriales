@@ -326,6 +326,44 @@ void main() {
 } 
 ```
 
+### Abstract Ejemplo
+```
+abstract class Animal{
+  int patas;
+  void emitirSonido();
+}
+
+class Perro implements Animal{
+  int patas;
+  int colas;
+  void emitirSonido() => print("GUAU GUAU GUAU");
+}
+
+class Gato implements Animal{
+  int patas;
+  int colas;
+  void emitirSonido() => print("MIAU MIAU MIAU");
+}
+
+
+void main() {
+  Animal perro = new Perro();
+  Animal gato = new Gato();
+  Perro perro2 = new Perro();
+  Gato gato2 = new Gato();
+  
+  List<Animal> list = new List<Animal>();
+  list.add(perro);
+  list.add(gato);
+  list.add(gato2);
+  list.add(perro2);
+  
+  list.forEach((e){
+    e.emitirSonido();
+  });
+}
+```
+
 ### Interfaces implicitas
 ```dart
 class Empleado{
