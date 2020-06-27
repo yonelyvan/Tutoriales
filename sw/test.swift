@@ -64,8 +64,18 @@ print(greet(name:"nik"))
 print(suma(a:3,b:7))
 
 
+//vector
+
+//map
 
 
+// struturas
+struct Point{
+    var x = 0
+    var y = 0
+}
+var point = Point(x:11,y:33)
+print(point) // point.x point.y 
 
 
 
