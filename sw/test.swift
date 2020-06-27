@@ -67,7 +67,11 @@ print(suma(a:3,b:7))
 //vector
 
 //map
-
+var dictionary: [String: String] = [:]
+// add key-value pair
+dictionary["es"] = "peru"
+dictionary["en"] = "EEUU"
+print(dictionary["es"] + " pais" )
 
 // struturas
 struct Point{
